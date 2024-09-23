@@ -8,12 +8,16 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* NAVBAR */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
     background-color: white;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
 }
 
 .name-logo {
@@ -23,7 +27,7 @@ nav {
 }
 
 .name-logo span {
-    color: #4CAF50;
+    color: #4caf50;
 }
 
 .nav-link {
@@ -42,7 +46,134 @@ nav {
 
 .nav-link a:hover {
     border-bottom: 2px solid rgb(190, 109, 3);
-    color: #4CAF50;
+    color: #4caf50;
     font-weight: 600;
 }
 
+/* HOME */
+/* SHOP */
+
+/* ABOUT */
+/* About Brand */
+.about-brand h1 {
+    background-image: url(Images/garbage.jpg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.546);
+    background-blend-mode: darken;
+    color: white;
+    height: 250px;
+    line-height: 250px; /* dibuat sama agar sejajar secara vertikal */
+    text-align: center;
+}
+
+.brand-story {
+    margin: 50px;
+}
+
+.brand-story span {
+    color: #4caf50;
+}
+
+.brand-story h2 {
+    text-align: center;
+    color: rgb(190, 109, 3);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.brand-story-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: justify;
+    gap: 120px;
+    margin: 0 40px;
+    font-size: 17px;
+}
+
+.brand-story-content img {
+    width: 270px;
+    border-radius: 20%;
+}
+
+.vm {
+    margin: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.vision, .mission {
+    flex: 1;
+    margin: 0 40px;
+    text-align: justify;
+}
+
+.vision h2{
+    color: #4caf50;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+.mission h2 {
+    color: rgb(190, 109, 3);
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+
+
+/* About Team */
+.about-team h1 {
+    background-image: url(Images/teamwork.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.546);
+    background-blend-mode: darken;
+    color: white;
+    height: 250px;
+    line-height: 250px; /* dibuat sama agar sejajar secara vertikal */
+    text-align: center;
+}
+
+.meet-the-team {
+    text-align: center;
+    margin: 40px;
+}
+
+.green {
+    color: #4caf50;
+}
+
+.brown {
+    color: rgb(190, 109, 3);
+}
+
+.profiles-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 80px;
+    margin: 40px;
+}
+
+.profile {
+    text-align: center;
+    flex: 1;
+}
+
+.profile img {
+    width: 200px;
+    border-radius: 80%;
+}
+
+.profile h3 {
+    margin: 10px;
+}
+
+.profile p {
+    font-size: 14px;
+    text-align: justify;
+}
+/* CONTACT */
