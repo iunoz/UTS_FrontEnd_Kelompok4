@@ -44,10 +44,34 @@ nav {
     font-weight: 600;
 }
 
+.nav-link li {
+    position: relative;
+}
+
+.dropdown {
+    display: none; /* sembunyikan dropdown secara default */
+    position: absolute; /* posisikan dropdown secara absolut */
+    background-color: white;
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1); /* */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dropdown li {
+    padding: 10px 20px;
+    text-align: center;
+}
+
 .nav-link a:hover {
     border-bottom: 2px solid rgb(190, 109, 3);
     color: #4caf50;
     font-weight: 600;
+}
+
+.nav-link li:hover .dropdown {
+    display: block;
 }
 
 /* HOME */
@@ -103,10 +127,31 @@ nav {
     gap: 60px;
 }
 
+@keyframes goUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px); /* 100px dri bawah keatas */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* balik ke posisi awal */
+    }
+}
+
 .vision, .mission {
     flex: 1;
     margin: 0 40px;
     text-align: justify;
+    opacity: 0;
+    animation: goUp 2s ease-in-out forwards; /* forwards agar pertahanin keadaan akhir (to) */
+}
+
+.vision {
+    animation-delay: 0.5s;
+}
+
+.mission {
+    animation-delay: 1s;
 }
 
 .vision h2{
