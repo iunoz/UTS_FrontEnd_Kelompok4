@@ -80,7 +80,7 @@ nav {
 /* ABOUT */
 /* About Brand */
 .about-brand h1 {
-    background-image: url(Images/garbage.jpg);
+    background-image: url(../Assets/Images/garbage.jpg);
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.546);
     background-blend-mode: darken;
@@ -172,7 +172,7 @@ nav {
 
 /* About Team */
 .about-team h1 {
-    background-image: url(Images/teamwork.jpg);
+    background-image: url(../Assets/Images/teamwork.jpg);
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 0.546);

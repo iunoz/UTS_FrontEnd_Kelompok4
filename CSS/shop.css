@@ -1,0 +1,170 @@
+/*Global Styles*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* NAVBAR */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+}
+
+.name-logo {
+    font-size: 24px;
+    color: rgb(190, 109, 3);
+    font-weight: 600;
+}
+
+.name-logo span {
+    color: #4caf50;
+}
+
+.nav-link {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-link li {
+    position: relative;
+}
+
+.dropdown {
+    display: none; /* sembunyikan dropdown secara default */
+    position: absolute; /* posisikan dropdown secara absolut */
+    background-color: white;
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dropdown li {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.nav-link a:hover {
+    border-bottom: 2px solid rgb(190, 109, 3);
+    color: #4caf50;
+    font-weight: 600;
+}
+
+.nav-link li:hover .dropdown {
+    display: block;
+}
+
+/* END OF NAVBAR */
+
+.pageTitle {
+    display: flex;
+    justify-content: left;
+    margin: 30px 80px;
+}
+.pageTitle h3 {
+    font-size: 30px;
+    color: #333;
+    font-family: 'poppins', sans-serif;
+}
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0px 150px;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #f4f4f4;
+    padding: 1rem;
+    margin: 1rem;
+    flex-basis: calc(20% - 5px); /* untuk mengatur 4 item dalam setiap baris */
+    text-align: left;
+}
+.product:hover {
+    border: 1px solid #000;
+}
+.product img {
+    display: flex;
+    justify-content: left;
+    max-width: 100%;
+    height: auto;
+}
+.product img:hover {
+    cursor: pointer
+}
+.product hr {
+    margin: 1rem 0;
+    border: 0;
+    border-top: 1px solid hsl(0, 0%, 70%);
+}
+.product h3 {
+    display: flex;
+    font-size: 16px;
+    font-family: 'poppins', sans-serif;
+}
+.product h3:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.product a {
+    text-decoration: none;
+    color: #000000;
+}
+.product p {
+    margin: 7px 0;
+    color: #555;
+    font-size: 12px;
+}
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.pagination button {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 8px 16px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.pagination button:hover {
+    background-color: #e9e9e9;
+}
+.pagination span {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 8px 16px;
+    margin: 0 5px;
+}
+
+/* End Of Pagination */
