@@ -5,30 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReShoes - About Us</title>
-    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/about.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script> <!-- library typed dari cdn github-->
+    <script src="../JS/about.js" defer></script>
     
 </head>
 
 <body>
-    <header>
-        <nav>
-            <p class="name-logo"><span>Re</span>Shoes</p>
+    <nav>
+        <p class="name-logo"><span>Re</span>Shoes</p>
     
-            <ul class="nav-link">
-                <li><a href="index.html">Home</a></li>
-                <li>
-                    <a href="shop.html">Shop</a>
-                    <ul class="dropdown">
-                        <li><a href="shop-men.html">Men</a></li>
-                        <li><a href="shop-women.html">Women</a></li>
-                        <li><a href="shop-kids.html">Kids</a></li>
-                    </ul>
-                </li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+        <ul class="nav-link">
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="shop.html">Shop</a>
+                <ul class="dropdown">
+                    <li><a href="shop-men.html">Men</a></li>
+                    <li><a href="shop-women.html">Women</a></li>
+                    <li><a href="shop-kids.html">Kids</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
 
     <div class="about-brand">
         <h1>About Brand</h1>
@@ -56,6 +56,30 @@
             </div>
         </div>
 
+    <div class="funfact">
+        <h2><span class="green">Did</span> You <span class="brown">Know</span>?</h2>
+        <div class="funfact-content">
+            <div class="funfact-text">
+                <p>In 2023, <span class="reddish">paper/cardboard</span>, <span class="greenish">plastic</span>, <span
+                class="brownish">rubber/leather</span>, and <span class="blueish">fabric</span> waste contributed
+                significantly
+                to global waste. <span class="reddish">Paper and cardboard</span> made up <span
+                class="reddish">10.86</span>%, yet much of it still ends up in landfills despite
+                being easy to recycle. <span class="greenish">Plastic</span> accounted for <span
+                class="greenish">19.19</span>
+                %, posing a major environmental threat due to its slow decomposition and low recycling rates.
+                <span class="brownish">Rubber and leather</span> waste, at <span class="brownish">2.55</span>%, often
+                from tires and
+                household items, is difficult to recycle. <span class="blueish">Fabric</span> waste, largely
+                from the fashion industry, contributed <span class="blueish">2.95</span>%, and despite efforts, much of
+                it is still
+                not recycled.</p>
+            </div>
+            <div class="pie-chart">
+            </div>
+        </div>
+    </div>
+
     </div>
 
     <div class="about-team">
@@ -65,7 +89,7 @@
             <div class="profiles-container">
                 <div class="profile">
                     <img src="../Assets/Images/melvyn-bw-crop.jpg" alt="melvyn-profile">
-                    <h3>Melvyn Benaya Wijaya</h3>
+                    <h3 id="name1"></h3>
                     <p>Saya merupakan seorang mahasiswa aktif Universitas Tarumanagara yang mengambil jurusan Teknik Informatika. Selain
                     mempelajari bidang teknologi, saya memiliki minat khusus terhadap isu-isu lingkungan, terutama dalam pengelolaan limbah
                     elektronik.</p>
@@ -73,13 +97,13 @@
 
                 <div class="profile">
                     <img src="../Assets/Images/greg-bw-crop.jpg" alt="greg-profile">
-                    <h3>Gregorius Nathanyel Benedict</h3>
+                    <h3 id="name2"></h3>
                     <p>Saya merupakan seorang mahasiswa aktif Universitas Tarumanagara yang mengambil jurusan Teknik Informatika. Saya tertarik untuk mengeksplorasi inovasi di bidang teknologi yang dapat membantu pengolahan limbah plastik menjadi produk yang lebih ramah lingkungan, dan juga mengingatkan kepada masyarakat agar memakai barang daur ulang.</p>
                 </div>
 
                 <div class="profile">
                     <img src="../Assets/Images/ryan-bw-crop.jpg" alt="ryan-profile">
-                    <h3>Ryan Hermanto</h3>
+                    <h3 id="name3"></h3>
                     <p>Saya merupakan seorang mahasiswa aktif Universitas Tarumanagara yang mengambil jurusan Teknik Informatika. Saya memiliki ketertarikan pada energi terbarukan dan bagaimana teknologi dapat mendukung transisi kita dari energi fosil ke energi yang lebih ramah lingkungan, seperti tenaga surya dan angin. </p>
                 </div>
             </div>

@@ -13,6 +13,8 @@ nav {
     position: sticky;
     top: 0;
     box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    z-index: 999;
 }
 
 .deskripsi-produk p {
