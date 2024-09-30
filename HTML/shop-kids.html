@@ -5,28 +5,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReShoes - Shop</title>
-    <link rel="stylesheet" href="../CSS/shop-kids.css">
+    <link rel="stylesheet" href="../CSS/shop.css">
 
 </head>
 
 <body>
-    <nav>
-        <p class="name-logo"><span>Re</span>Shoes</p>
+    <header>
+        <nav>
+            <p class="name-logo"><span>Re</span>Shoes</p>
 
-        <ul class="nav-link">
-            <li><a href="index.html">Home</a></li>
-            <li>
-                <a href="shop.html">Shop</a>
-                <ul class="dropdown">
-                    <li><a href="shop-men.html">Men</a></li>
-                    <li><a href="shop-women.html">Women</a></li>
-                    <li><a href="shop-kids.html">Kids</a></li>
-                </ul>
-            </li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
+            <ul class="nav-link">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="shop.html">Shop</a>
+                    <ul class="dropdown">
+                        <li><a href="shop-men.html">Men</a></li>
+                        <li><a href="shop-women.html">Women</a></li>
+                        <li><a href="shop-kids.html">Kids</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="title">
+        <h1>Kids Products</h1>
+    </div>
+    
+    <section class="shop-container">
+        <!-- Example of a product item -->
+        <div class="product-item">
+            <a href="product15.html">
+                <img src="../Assets/Images/ShoeImages/recycled-shoe5.png" alt="Product 15">
+                <h3>ReShoes 991 - Made in UK</h3>
+                <span class="price">$499</span>
+            </a>
+        </div>
+        
+        <div class="product-item">
+            <a href="product16.html">
+                <img src="../Assets/Images/ShoeImages/recycled-shoe6.png" alt="Product 16">
+                <h3>ReShoes 574</h3>
+                <span class="price">$499</span>
+            </a>
+        </div>
+        
+        <div class="product-item">
+            <a href="product17.html">
+                <img src="../Assets/Images/ShoeImages/recycled-shoe7.png" alt="Product 17">
+                <h3>ReShoes 1000 - Unisex</h3>
+                <span class="price">$499</span>
+            </a>
+        </div>
+        
+        <div class="product-item">
+            <a href="product18.html">
+                <img src="../Assets/Images/ShoeImages/recycled-shoe8.png" alt="Product 18">
+                <h3>ReShoes Fresh Foam</h3>
+                <span class="price">$499</span>
+            </a>
+        </div>
+        
+        <div class="product-item">
+            <a href="product19.html">
+                <img src="../Assets/Images/ShoeImages/recycled-shoe9.webp" alt="Product 19">
+                <h3>ReShoes Dunk Low</h3>
+                <span class="price">$499</span>
+            </a>
+        </div>
+        
+        <div class="product-item">
+            <a href="product20.html">
+                <img src="../Assets/Images/ShoeImages/recycled-shoe10.png" alt="Product 20">
+                <h3>ReShoes Jordan 4</h3>
+                <span class="price">$499</span>
+            </a>
+        </div>
+    </section>
+
+    <div class="pagination" id="pagination"></div>
+    <script src="../JS/pagination.js"></script>
 </body>
+
 
 </html>
