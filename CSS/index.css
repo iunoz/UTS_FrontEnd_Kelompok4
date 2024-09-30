@@ -283,13 +283,13 @@ footer {
 
 
 .slide .item:nth-child(3){
-    left: 50%;
+    left: 70%;
 }
 .slide .item:nth-child(4){
-    left: calc(50% + 220px);
+    left: calc(70% + 220px);
 }
 .slide .item:nth-child(5){
-    left: calc(50% + 440px);
+    left: calc(70% + 440px);
 }
 
 /* here n = 0, 1, 2, 3,... */
