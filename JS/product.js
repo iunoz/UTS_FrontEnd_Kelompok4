@@ -15,7 +15,3 @@ sizeButtons.forEach(button => {
         console.log("Ukuran yang dipilih:", selectedSize);
     });
 });
-
-document.querySelector('.add-to-cart').addEventListener('click', () => {
-    window.location.href = 'shop.html'; // Arahkan ke shop.html
-});
