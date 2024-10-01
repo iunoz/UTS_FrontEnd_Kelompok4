@@ -1,7 +1,7 @@
 const form = document.querySelector('form');
 const nickname = document.querySelector('.name');
 const email = document.querySelector('.email');
-const message = document.querySelector('.message');
+const messageProblem = document.querySelector('.message');
 
 //tambah event listener di form
 form.addEventListener('submit', e => {
@@ -41,7 +41,7 @@ const validateInputs = () => {
     //get value di setiap input fields
     const nameValue = nickname.value.trim();
     const emailValue = email.value.trim();
-    const messageValue = message.value.trim();
+    const messageProblemValue = messageProblem.value.trim();
 
     //tambahkan validasi untuk setiap kondisi
     if (nameValue === '') {
@@ -61,11 +61,11 @@ const validateInputs = () => {
         setSuccess(email);
     }
 
-    if (messageValue === '') {
-        setError(message, 'Pls enter your message or problem')
+    if (messageProblemValue === '') {
+        setError(messageProblem, 'Pls enter your message or problem')
         isValid = false;
     } else {
-        setSuccess(message);
+        setSuccess(messageProblem);
     }
 
     return isValid;

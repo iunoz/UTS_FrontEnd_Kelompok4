@@ -22,5 +22,3 @@ var typed3 = new Typed("#name3", {
     loop: true,
     showCursor: false
 });
-
-

@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -177,7 +178,7 @@ nav {
 
 .funfact h2 {
     margin: 10px 40px -10px 40px;
-    font-size: 26px;
+    font-size: 24px;
 }
 
 .funfact-content {
@@ -282,3 +283,147 @@ nav {
     text-align: justify;
 }
 
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    position: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    width: 100%;
+    margin-top: 50px;
+}
+
+
+.sosial {
+    margin-bottom: 10px;
+}
+
+.sosial a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.sosial a:hover {
+    color: rgb(190, 109, 3);
+}
+
+.footer-links {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    margin: 0 15px;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: rgb(190, 109, 3);
+}
+
+.copyright {
+    color: #888;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1100px){
+    .funfact h2 {
+        margin: 10px 40px 25px 40px !important;
+    }   
+}
+
+@media  screen and (max-width: 1000px) {
+    .funfact h2 {
+        margin: 10px 40px 30px 40px !important; 
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .funfact h2 {
+        margin: 10px 40px 60px 40px !important;
+        font-size: 22px;
+    }
+}
+
+
+@media screen and (max-width: 820px) {
+    nav {
+        flex-direction: column;
+    }
+        
+    .nav-link {
+        margin-top: 30px;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+        
+    .nav-link li {
+        width: 100%;
+    }
+        
+    .nav-link a {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+        
+    .brand-story-content {
+        flex-direction: column;
+        text-align: justify;
+        gap: 40px;
+        margin: 0;
+    }
+    
+    .brand-story-content img {
+        width: 300px;
+    }
+
+    .vm {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px;
+    }
+
+    .funfact {
+        margin: 65px 10px 30px 10px;
+    }
+
+    .funfact-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .funfact h2 {
+        text-align: center !important;
+        margin-bottom: 80px !important;
+        margin-top: -20px !important;
+    }
+
+    .pie-chart {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profiles-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .profile img {
+        width: 150px;
+    }
+    
+    .profile p {
+        text-align: justify;
+    }
+}
