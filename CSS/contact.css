@@ -84,6 +84,20 @@ nav {
     display: block;
 }
 
+li a.login-button {
+    border: 2px solid #4caf50;
+    padding: 10px 10px;
+    border-radius: 25px;
+    transition: border 0.3s ease;
+    text-decoration: none;
+}
+
+li a.login-button:hover {
+    border-color: rgb(205, 124, 17);
+    background-color: rgb(205, 124, 17);
+    color: #f4f4f4;
+}
+
 /* Contact */
 /*Contact Section */
 .cont-sec {
@@ -97,13 +111,13 @@ nav {
 @keyframes goDown {
     from {
         opacity: 0;
-        transform: translateY(-100px);
+        transform: translateX(-100px);
         /* 100px dri bawah keatas */
     }
 
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
         /* balik ke posisi awal */
     }
 }
