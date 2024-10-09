@@ -255,6 +255,45 @@ footer {
     font-size: 14px; 
 }
 
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding:10px;
+    margin:30px;
+    height:auto;
+    margin-left: 0px;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    position: relative;
+    transform: translateX(25%); /* Gambar aktif muncul di tengah */
+}
+
+.carousel-item.prev {
+    transform: translateX(-50%); /* Gambar sebelumnya geser ke kiri */
+}
+
+.carousel-item.next {
+    transform: translateX(100%); /* Gambar berikutnya masuk dari kanan */
+}
+
+
+
 /* Slider Container */
 .container {
     position: relative; /* Tetap posisi menjadi relatif */
