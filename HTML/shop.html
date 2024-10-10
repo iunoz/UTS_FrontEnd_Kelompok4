@@ -1,57 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReShoes - Shop</title>
     <link rel="stylesheet" href="../CSS/shop.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="../JS/search.js" defer></script>
+    <script src="../JS/filter.js" defer></script>
     <script src="../JS/navbar.js" defer></script>
 </head>
 
 <body>
+    <nav>
+        <p class="name-logo"><span>Re</span>Shoes</p>
+        
+        <ul class="nav-link">
+            <li><a href="index.html">Home</a></li>
+            <li class="shop-menu">
+                <a href="shop.html">Shop</a>
+                <ul class="dropdown">
+                    <li><a href="shop-men.html">Men</a></li>
+                    <li><a href="shop-women.html">Women</a></li>
+                    <li><a href="shop-kids.html">Kids</a></li>
+                </ul>
+            </li>
+            <li class="small-menu"><a href="shop-men.html">Men</a></li>
+            <li class="small-menu"><a href="shop-women.html">Women</a></li>
+            <li class="small-menu"><a href="shop-kids.html">Men</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html" class="login-button">Login</a></li>
+        </ul>
 
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
     
-        <nav>
-            <p class="name-logo"><span>Re</span>Shoes</p>
+    <section>
+        <div class="title">
+            <h1 id="product-title">Our Products - [1]</h1>
+        </div>
+    </section>
 
-            <ul class="nav-link">
-                <li><a href="index.html">Home</a></li>
-                <li>
-                    <a href="shop.html">Shop</a>
-                    <ul class="dropdown">
-                        <li><a href="shop-men.html">Men</a></li>
-                        <li><a href="shop-women.html">Women</a></li>
-                        <li><a href="shop-kids.html">Kids</a></li>
-                    </ul>
-                </li>
-                <li class="small-menu"><a href="shop-men.html">Men</a></li>
-                <li class="small-menu"><a href="shop-women.html">Women</a></li>
-                <li class="small-menu"><a href="shop-kids.html">Men</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html" class="login-button">Login</a></li>
-            </ul>
-            
-            <div class="menu-icon">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </nav>
-    
-
-<div class="title">
-    <h1>Our Products</h1>
-</div>
+<section class="filter-container">
+    <div class="cont-filter">
+        <div class="search">
+            <input type="text" id="search" placeholder="Search products...">
+        </div>
+        <div class="filter-options">
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="originals">Originals</option>
+                <option value="essentials">Essentials</option>
+            </select>
+            <input type="number" id="min-price" placeholder="Min Price" min="0">
+            <input type="number" id="max-price" placeholder="Max Price" min="0">
+            <button id="filter-btn">FILTER</button>
+        </div>
+    </div>
+</section>
 
 <section class="shop-container">
-    <div class="search">
-        <input type="text" id="search" placeholder="Search products...">
-    </div>
-    <!-- Example of a product item -->
-    <div class="product-item">
+    <div class="product-item" data-category="originals" data-price="499">
         <a href="product1.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe1.avif" alt="Product 1">
             <h3>ReShoes OZWEEGO</h3><br>
@@ -59,7 +74,7 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="originals" data-price="999">
         <a href="product2.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe2.avif" alt="Product 2">
             <h3>ReShoes UltraBoost 1.0</h3>
@@ -67,7 +82,7 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="originals" data-price="799">
         <a href="product3.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe3.avif" alt="Product 3">
             <h3>ReShoes Superstar</h3>
@@ -75,7 +90,7 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="originals" data-price="699">
         <a href="product4.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe4.avif" alt="Product 4">
             <h3>ReShoes SL 72 RS</h3>
@@ -83,7 +98,7 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="originals" data-price="899">
         <a href="product5.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe5.png" alt="Product 5">
             <h3>ReShoes 991 - Made in UK</h3>
@@ -91,7 +106,7 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="essentials" data-price="899">
         <a href="product6.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe6.png" alt="Product 6">
             <h3>ReShoes 574</h3>
@@ -99,7 +114,7 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="essentials" data-price="899">
         <a href="product7.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe7.png" alt="Product 7">
             <h3>ReShoes 1000 - Unisex</h3>
@@ -107,7 +122,7 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="essentials" data-price="599">
         <a href="product8.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe8.png" alt="Product 8">
             <h3>ReShoes Fresh Foam</h3>
@@ -115,7 +130,7 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="essentials" data-price="399">
         <a href="product9.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe9.webp" alt="Product 9">
             <h3>ReShoes Dunk Low</h3>
@@ -123,7 +138,7 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="essentials" data-price="499">
         <a href="product10.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe10.png" alt="Product 10">
             <h3>ReShoes Jordan 4</h3>
@@ -131,7 +146,7 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="originals" data-price="999">
         <a href="product11.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe11.avif" alt="Product 11">
             <h3>ReShoes Lothrtex SPZL</h3>
@@ -139,7 +154,7 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="originals" data-price="999">
         <a href="product12.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe12.avif" alt="Product 12">
             <h3>ReShoes Adios Pro 3</h3>
@@ -147,7 +162,7 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="originals" data-price="799">
         <a href="product13.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe13.avif" alt="Product 13">
             <h3>ReShoes Terrex 2</h3>
@@ -155,7 +170,7 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="women" data-price="499">
         <a href="product14.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe14.avif" alt="Product 14">
             <h3>ReShoes Duramo SL</h3>
@@ -163,7 +178,7 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="women" data-price="499">
         <a href="product15.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe15.avif" alt="Product 15">
             <h3>ReShoes Courtblock</h3>
@@ -171,7 +186,7 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="women" data-price="499">
         <a href="product16.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe16.avif" alt="Product 16">
             <h3>ReShoes Racer TR23</h3>
@@ -179,7 +194,7 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="women" data-price="499">
         <a href="product17.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe17.avif" alt="Product 17">
             <h3>ReShoes Dropset 3</h3>
@@ -187,7 +202,7 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="women" data-price="499">
         <a href="product18.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe18.avif" alt="Product 18">
             <h3>ReShoes Everyset</h3>
@@ -195,7 +210,7 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="essentials" data-price="499">
         <a href="product19.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe19.avif" alt="Product 19">
             <h3>ReShoes Powerlift 5</h3>
@@ -203,16 +218,38 @@
         </a>
     </div>
     
-    <div class="product-item">
+    <div class="product-item" data-category="essentials" data-price="499">
         <a href="product20.html">
             <img src="../Assets/Images/ShoeImages/recycled-shoe20.avif" alt="Product 20">
             <h3>ReShoes Adi2000</h3>
             <span class="price">$499</span>
         </a>
     </div>
+
+    <div class="no-products" style="display: none;">No products found</div>
+
 </section>
 
 <div class="pagination" id="pagination"></div>
+<button id="back-to-top" style="display: none;" ><i class='bx bx-chevron-up'></i></button>
+
+<footer>
+    <div class="sosial">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024 ReShoes. All Rights Reserved.</p>
+    </div>
+    <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="shop.html">Shop</a>
+        <a href="index.html">Home</a>
+    </div>
+</footer>
+
 <script src="../JS/pagination.js"></script>
 
 </body>
