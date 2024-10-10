@@ -8,6 +8,7 @@ menuIcon.addEventListener('click', function() {
     navLink.classList.toggle('show');
 });
 
+// function untuk back to top button dengan library jquery
 $(document).ready(function() {
     $(window).scroll(function() {
         if ($(this).scrollTop() > 100) {

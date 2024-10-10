@@ -1,36 +1,39 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const categoryFilter = document.getElementById("category-filter");
-    const minPriceInput = document.getElementById("min-price");
-    const maxPriceInput = document.getElementById("max-price");
-    const filterButton = document.getElementById("filter-btn");
-    const productItems = document.querySelectorAll(".product-item");
-    const noProductsMessage = document.querySelector(".no-products");
 
-    // Function to filter products
+    // mengambil elemen dari shop.html
+    const categoryFilter = document.getElementById("category-filter"); 
+    const minPriceInput = document.getElementById("min-price"); 
+    const maxPriceInput = document.getElementById("max-price"); 
+    const filterButton = document.getElementById("filter-btn"); 
+    const productItems = document.querySelectorAll(".product-item"); 
+    const noProductsMessage = document.querySelector(".no-products"); 
+
+    // Menambahkan event listener pada tombol filter
     filterButton.addEventListener("click", function() {
-        const selectedCategory = categoryFilter.value;
-        const minPrice = parseInt(minPriceInput.value) || 0; // Default to 0 if empty
-        const maxPrice = parseInt(maxPriceInput.value) || Infinity; // Default to Infinity if empty
-        let productsFound = false; // Track if any products are found
+        const selectedCategory = categoryFilter.value; // kategori yang dipilih
+        const minPrice = parseInt(minPriceInput.value) || 0; // harga minimum (default 0)
+        const maxPrice = parseInt(maxPriceInput.value) || Infinity; // harga maksimum (default Infinity)
+        let productsFound = false; 
 
+        // Memeriksa setiap produk untuk kategori dan harga
         productItems.forEach(function(product) {
-            const productCategory = product.getAttribute("data-category");
-            const productPrice = parseInt(product.getAttribute("data-price"));
+            const productCategory = product.getAttribute("data-category"); 
+            const productPrice = parseInt(product.getAttribute("data-price")); 
 
-            // Check if the product matches the selected category and price range
+            // Memeriksa apakah produk sesuai dengan kategori dan rentang harga yang dipilih di filter
             const matchesCategory = selectedCategory === "all" || productCategory === selectedCategory;
             const matchesPrice = productPrice >= minPrice && productPrice <= maxPrice;
 
-            // Show or hide the product based on the filter criteria
+            // Menampilkan produk jika sesuai dengan kategori dan harga
             if (matchesCategory && matchesPrice) {
-                product.style.display = "block";
-                productsFound = true; // Found at least one product
-            } else {
-                product.style.display = "none";
+                product.style.display = "block"; 
+                productsFound = true; 
+            } else { // menyembunyikan produk jika tidak sesuai
+                product.style.display = "none"; 
             }
         });
 
-        // Show or hide the "No products found" message
+        // Menampilkan atau menyembunyikan pesan jika tidak ada produk ditemukan
         noProductsMessage.style.display = productsFound ? "none" : "block";
     });
 });

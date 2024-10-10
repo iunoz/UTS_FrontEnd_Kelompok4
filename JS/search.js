@@ -7,4 +7,4 @@ $(document).ready(function() {
             $(this).toggle($(this).find("h3").text().toLowerCase().indexOf(value) > -1);
         });
     });
-});
+}); 

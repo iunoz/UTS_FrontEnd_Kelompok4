@@ -8,9 +8,6 @@ form.addEventListener('submit', e => {
     if(validateInputs()) {
         form.submit(); // Submit form jika validasi berhasil
     }
-    if(!validateInputs) {
-        alert('Please fill all the input');
-    }
 });
 
 const setError = (element, message) => {

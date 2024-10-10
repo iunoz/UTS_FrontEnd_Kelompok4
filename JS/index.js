@@ -20,7 +20,7 @@ function showCarouselItems(direction = 'next') {
         item.style.opacity = 0;
     });
 
-    const currentItem = items[index];
+    const currentItem = items[index]; 
 
     if (direction === 'next') {
         currentItem.classList.add('prev');  // Item sekarang keluar ke kiri
