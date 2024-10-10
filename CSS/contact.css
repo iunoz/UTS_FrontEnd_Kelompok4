@@ -12,6 +12,7 @@ body {
     background-size: cover;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 /* NAVBAR */
@@ -301,6 +302,10 @@ form {
 }
 
 @media screen and (max-width: 820px) {
+    body {
+        overflow: auto;
+    }
+    
     .nav-link {
         flex-direction: column;
         align-items: center;
