@@ -28,6 +28,7 @@ nav {
     line-height: 1.5; /* Adjust line height for readability */
     margin: 20px 0; /* Add margin for spacing */
     font-family: 'Arial', sans-serif; /* Change font family */
+    order:4;
 }
 .deskripsi-produk span {
     color: #4caf50; /* Set text color */
@@ -314,6 +315,7 @@ footer {
     background: #f5f5f5; /* Warna latar belakang */
     box-shadow: 0 10px 20px #dbdbdb; /* Bayangan */
     margin: 0; /* Hapus margin untuk penempatan yang tepat */
+    overflow: hidden;
 }
 .container-wrapper {
     position: relative; /* Atur posisi induk menjadi relatif */
@@ -405,6 +407,33 @@ footer {
     animation: animate 1s ease-in-out 0.6s 1 forwards;
 }
 
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-items {
+    display: flex;
+    gap: 20px;
+}
+
+.carousel-item {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 300px; /* Batas maksimal ukuran gambar */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
 
 @keyframes animate {
     from{
@@ -456,6 +485,21 @@ footer {
 }
 
 @media screen and (max-width: 820px) {
+    .body {
+        display: flex;
+        flex-direction: column; /* Mengatur elemen dalam kolom */
+    }
+
+    .body .deskripsi-produk {
+        order: 1; /* Mengatur urutan elemen */
+    }
+    
+    .body .img {
+        order: 2; /* Mengatur urutan elemen */
+    }
+    .body .carousel-container{
+        order: 3;
+    }
     .nav-link {
         flex-direction: column;
         align-items: center;
@@ -498,4 +542,55 @@ footer {
         font-size: 30px;
         cursor: pointer;
     }
+    .menu-icon {
+        display: flex;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .body .img {
+        display: flex; /* Menggunakan flexbox */
+        justify-content: center; /* Pusatkan gambar secara horizontal */
+        align-items: center; /* Pusatkan gambar secara vertikal */
+        margin-top: 0px; /* Jarak atas jika diperlukan */
+        overflow: scroll;
+    }
+    
+    .body .deskripsi-produk{
+        display:grid;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .body .img img {
+        display: block; /* Mengubah ke block agar tidak ada space di bawah gambar */
+        width: 100%; /* Mengatur lebar gambar */
+        height: 180%; /* Menjaga rasio aspek gambar */
+    }
+
+    .carousel-item {
+        max-width: 35%;
+        align-items: center;
+        justify-content: center;
+        margin-left:-26%;
+    }
+
+    .carousel-container h2{
+        display: none;
+        font-size: 1.5rem; /* Ukuran font lebih kecil untuk ponsel */
+    }
+
+    .Text{
+        font-size: 3rem;
+    }
+    
+    .container .slide {
+    width: 100%; /* Mengatur lebar menjadi 50% dari kontainer induknya */
+    height: 100%;
+    transform: scale(0.7);
+    transform-origin: center; /* Memastikan perubahan ukuran terjadi dari tengah */
 }
+}
+
+    
+
+

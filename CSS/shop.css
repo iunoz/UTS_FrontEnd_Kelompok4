@@ -328,9 +328,14 @@ footer {
 /* Media Queries */
 @media (max-width: 1024px) {
     .product-item {
-        width: calc(33.333% - 20px);
+        width: calc(33.333% - 10px);
     }
 }
+
+    .img-display .img-display img{
+
+
+    }
 
 @media screen and (max-width: 820px) {
     .nav-link {
