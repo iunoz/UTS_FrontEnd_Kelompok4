@@ -1,8 +1,8 @@
-/*Global Styles*/
-
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; 
 }
 
 body {
@@ -52,12 +52,12 @@ nav {
 }
 
 .dropdown {
-    display: none; /* sembunyikan dropdown secara default */
-    position: absolute; /* posisikan dropdown secara absolut */
+    display: none;
+    position: absolute;
     background-color: white;
     list-style: none;
     padding: 10px 0;
-    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1); /* */
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
     left: 50%;
     transform: translateX(-50%);
 }
@@ -111,6 +111,68 @@ li a.login-button:hover {
     color: #333;
 }
 
+/* Filter Container */
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
+    width: 100%; 
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 685px;
+}
+
+.search input {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px;
+    align-items: center; 
+    width: 100%; 
+}
+
+.filter-options select,
+.filter-options input[type="number"] {
+    flex: 1; 
+    min-width: 120px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#filter-btn {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: solid 1px #000000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#filter-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.no-products {
+    text-align: center;
+    margin: 40px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
 .shop-container {
     display: flex;
     flex-wrap: wrap;
@@ -128,10 +190,9 @@ li a.login-button:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
-    width: calc(25% - 20px); 
+    width: calc(25% - 20px);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     cursor: pointer;
-    display: none; 
 }
 
 .product-item:hover {
@@ -143,7 +204,7 @@ li a.login-button:hover {
     height: 350px;
     object-fit: cover;
     border-bottom: 2px solid #000000;
-} 
+}
 
 .product-item a {
     text-decoration: none;
@@ -195,6 +256,76 @@ li a.login-button:hover {
     cursor: pointer;
 }
 
+#back-to-top {
+    position: fixed;
+    bottom: 30px; 
+    right: 30px; 
+    background-color: rgb(190, 109, 3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: rgb(205, 124, 17);
+}
+
+footer {
+    background-color: #f8f9fa; 
+    padding: 20px 0; 
+    text-align: center; 
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
+    position: flex; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%;
+    z-index: 10; 
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+.sosial {
+    margin-bottom: 10px; 
+}
+
+.sosial a {
+    margin: 0 10px; 
+    color: #333; 
+    font-size: 24px; 
+    transition: color 0.3s; 
+}
+
+.sosial a:hover {
+    color: rgb(190, 109, 3); 
+}
+
+.footer-links {
+    margin: 10px 0; 
+}
+
+.footer-links a {
+    margin: 0 15px; 
+    color: #666; 
+    text-decoration: none; 
+    transition: color 0.3s; 
+}
+
+.footer-links a:hover {
+    color: rgb(190, 109, 3); 
+}
+
+.copyright {
+    color: #888; 
+    font-size: 14px; 
+}
+
+/* Media Queries */
 @media (max-width: 1024px) {
     .product-item {
         width: calc(33.333% - 10px);
@@ -221,8 +352,7 @@ li a.login-button:hover {
     }
 
     .nav-link.show {
-        /*tampil jika diklik*/
-        display: flex;
+        display: flex; 
     }
 
     .dropdown {
@@ -265,11 +395,33 @@ li a.login-button:hover {
         padding: 8px 15px;
         margin: 50px 3px;
     }
+
+    .filter-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-options select,
+    .filter-options input[type="number"] {
+        width: 100%;
+    }
+
+    #filter-btn {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
     .product-item {
         width: 100%;
         margin-bottom: 20px;
+    }
+
+    .title {
+        margin: 40px 0 20px 0;
+    }
+
+    .title h1 {
+        font-size: 20px;
     }
 }
